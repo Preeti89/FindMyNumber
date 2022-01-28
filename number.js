@@ -1,5 +1,4 @@
 let secretNum = Math.trunc(Math.random() * 20) + 1;
-console.log(typeof secretNum, secretNum);
 let userInput;
 let scores = 20;
 let highScore = 0;
@@ -9,7 +8,6 @@ document.getElementById("clicking").addEventListener("click", function () {
   scores = 20;
   document.getElementsByClassName("target")[0].textContent = scores;
   secretNum = Math.trunc(Math.random() * 20) + 1;
-  console.log(secretNum);
   document.body.style.backgroundColor = "";
 });
 function onNum() {
