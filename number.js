@@ -9,6 +9,7 @@ document.getElementById("clicking").addEventListener("click", function () {
   document.getElementsByClassName("target")[0].textContent = scores;
   secretNum = Math.trunc(Math.random() * 20) + 1;
   document.body.style.backgroundColor = "";
+  document.getElementsByClassName("guessing")[0].textContent = "?";
 });
 function onNum() {
   userInput = Number(document.getElementById("numberid").value);
@@ -24,7 +25,7 @@ function onChecking() {
     document.getElementsByClassName("para")[0].textContent =
       "Well Done You have found it 😎";
     document.body.style.backgroundColor = "Purple";
-
+    document.getElementsByClassName("guessing")[0].textContent = secretNum;
     onHighScores();
     document.getElementById("valueId").textContent = highScore;
   } else if (userInput > secretNum) {
