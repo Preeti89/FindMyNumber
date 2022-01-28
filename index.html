@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: inherit;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        box-sizing: border-box;
+        font-family: "Press Start 2P", sans-serif;
+      }
+      #heading {
+        color: white;
+        width: 523px;
+        height: 114px;
+        margin-left: 30%;
+        margin-top: 7%;
+        font-size: 32px;
+      }
+      .head {
+        display: flex;
+        border-bottom: 5px solid white;
+        justify-content: center;
+        text-align: center;
+        justify-content: space-evenly;
+        position: relative;
+      }
+      .btw {
+        color: white;
+        margin-top: 10px;
+      }
+      .guessing {
+        position: absolute;
+        top: 78%;
+        width: 12%;
+        height: 46%;
+        border: 1px solid white;
+        background: white;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xxx-large;
+      }
+      #clicking {
+        width: 133px;
+        height: 56px;
+        background-color: white;
+        border: 1px solid white;
+        font-size: larger;
+        font-family: "Press Start 2P";
+        color: black;
+        cursor: pointer;
+        order: -1;
+        position: absolute;
+        left: 5%;
+        top: 9%;
+      }
+      .title {
+        display: flex;
+        justify-content: space-between;
+      }
+      .para1 {
+        color: white;
+        width: 293px;
+        font-size: 13px;
+        margin-bottom: 16px;
+      }
+      .para {
+        color: white;
+        font-size: large;
+        width: 292px;
+        margin-bottom: 65px;
+      }
+      .para2 {
+        color: white;
+        width: 293px;
+        font-size: 13px;
+      }
+      #sideLeft {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        justify-content: space-evenly;
+        margin-top: 50px;
+      }
+      #sideRight {
+        width: 50%;
+        height: 125px;
+        /* align-items: center; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-self: flex-end;
+      }
+
+      #numberid {
+        width: 205px;
+        background-color: black;
+        border: 2px solid white;
+        font-family: sans-serif;
+        font-size: xx-large;
+        font-style: italic;
+        color: white;
+        text-align: center;
+        margin-top: 15px;
+        height: 98px;
+      }
+      #checking {
+        width: 138px;
+        height: 62px;
+        background-color: white;
+        border: 1px solid white;
+        font-size: larger;
+        color: black;
+        text-align: center;
+        margin-top: 26px;
+        cursor: pointer;
+        font-family: "Press Start 2P";
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="head">
+      <h1 id="heading">Find My Number!</h1>
+      <p class="btw">(Between 1 and 20)</p>
+      <button id="clicking"><b>Again! </b></button>
+      <div class="guessing">?</div>
+    </header>
+    <main class="title">
+      <div id="sideLeft">
+        <input type="number" name="choose" id="numberid" onblur="onNum()" />
+
+        <button id="checking" onclick="onChecking()"><b>Check!</b></button>
+      </div>
+      <div id="sideRight">
+        <p class="para">Start finding....</p>
+        <p class="para1">💯 Scores: <span class="target">20</span></p>
+        <p class="para2">🥇 Highscore: <span id="valueId">0</span></p>
+      </div>
+    </main>
+    <script src="number.js"></script>
+  </body>
+</html>
